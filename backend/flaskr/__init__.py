@@ -148,8 +148,7 @@ def create_app(test_config=None):
         new_answer = body.get('answer', None)
         new_category = body.get('category', None)
         new_difficulty = body.get('difficulty', None)
-        search = body.get('search', None)
-        category_search = body.get('category_search', None)
+        search = body.get('searchTerm', None)
         try:
             if search:
                 selection = Question.query.order_by(
@@ -160,7 +159,6 @@ def create_app(test_config=None):
                 return jsonify({
                     'success': True,
                     'questions': current_questions,
-                    'searchterm': search,
                     'total_questions': len(selection.all())
                 })
 
