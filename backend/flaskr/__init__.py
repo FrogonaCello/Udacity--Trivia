@@ -242,21 +242,22 @@ def create_app(test_config=None):
 
         try:
             
-            if category_quiz:
-                if category_quiz['id'] < 0:
+            if category_quiz['id'] == 0:
                     quiz_questions = Question.query.all()
                 else:
                     quiz_questions = Question.query.filter(category=category_quiz['id']).all()
+            selection = []
+            for question in quiz_questions:
+                if question.id not in former_questions:
+                    selection.append(question.format())
                     
             if len(quiz_questions) != 0:
                 result = random.choice(quiz_questions)
                 return jsonify({
-                    'success': True,
                     'question': result
                 })
             else:
                 return jsonify({
-                    'success': False,
                     'question': False
                 })
         except:
