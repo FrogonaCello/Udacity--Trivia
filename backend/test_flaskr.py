@@ -22,12 +22,11 @@ class TriviaTestCase(unittest.TestCase):
             'question_id': 1001,
             'question': 'Why? Warum? Hvorfor?',
             'answer': 'Therefore! Darum! Derfor!',
-            'category': 'Science',
+            'category': '2',
             'difficulty': '5' 
         }
         
         self.new_category = {
-            'id': 1001,
             'type': 'Humoreske'
         }
 
