@@ -140,10 +140,10 @@ POST '/categories'
 - Allows a dictionary made of: "type"
 - Sample: curl http://127.0.0.1:5000/categories -X POST -H "Content-Type: application/json" -d '{"id":"7", "type":"Humor"}' 
 
-POST '/quizzes'
-- Method, that accepts input per object consisting of quiz_questions or quiz_categories
-- Allows a dictionary made of: "quiz_questions" or a number from 1-6 which is the id of the chosen category
-- Sample: curl -d '{"quiz_questions"="4", "quiz_category"="2"}' -H "Content-Type: application/x-www-form-urlencoded" -X POST
+POST '/play'
+- Method, that accepts input per object consisting of previous_questions and/or quiz_categories
+- Allows a dictionary made of: "previous_questions" and/or a number from 1-6 which is the id of the chosen category
+- Sample: curl -d '{"previous_questions": [4], "quiz_category": {"id":2}}' -H "Content-Type: application/x-www-form-urlencoded" -X POST
 
 DELETE '/questions'
 - Method, that accepts input per object id
@@ -188,5 +188,6 @@ I found useful help not only in the Udacity Class Videos, but also in these Know
 [Question 74972](https://knowledge.udacity.com/questions/74972)
 [Question 234306](https://knowledge.udacity.com/questions/234306)
 [Question 221105](https://knowledge.udacity.com/questions/221105)
+[Question 249630](https://knowledge.udacity.com/questions/249630)
 and on Github for [npm install and start](https://github.com/kentcdodds/advanced-react-patterns-v2/issues/34)
 and in using [Pep8online](http://pep8online.com) for checking formatting Python as mentioned by reviewer 
