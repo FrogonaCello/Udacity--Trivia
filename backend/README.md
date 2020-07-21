@@ -174,20 +174,22 @@ To run the tests, run
 ```
 dropdb trivia_test
 createdb trivia_test
-psql trivia_test < trivia.psql
+psql trivia_test < trivia.psql 
 python test_flaskr.py
 ```
 
 ## Contribution
 I found useful help not only in the Udacity Class Videos, but also in these Knowledge Questions:
-[234306](https://knowledge.udacity.com/questions/234306) 
-[246041](https://knowledge.udacity.com/questions/246041)
-[207019](https://knowledge.udacity.com/questions/207019)
-[Question 76808](https://knowledge.udacity.com/questions/76808)
-[Question 86723](https://knowledge.udacity.com/questions/86723)
-[Question 74972](https://knowledge.udacity.com/questions/74972)
-[Question 234306](https://knowledge.udacity.com/questions/234306)
-[Question 221105](https://knowledge.udacity.com/questions/221105)
-[Question 249630](https://knowledge.udacity.com/questions/249630)
-and on Github for [npm install and start](https://github.com/kentcdodds/advanced-react-patterns-v2/issues/34)
-and in using [Pep8online](http://pep8online.com) for checking formatting Python as mentioned by reviewer 
+- [234306](https://knowledge.udacity.com/questions/234306) 
+- [246041](https://knowledge.udacity.com/questions/246041)
+- [207019](https://knowledge.udacity.com/questions/207019)
+- [Question 76808](https://knowledge.udacity.com/questions/76808)
+- [Question 86723](https://knowledge.udacity.com/questions/86723)
+- [Question 74972](https://knowledge.udacity.com/questions/74972)
+- [Question 234306](https://knowledge.udacity.com/questions/234306)
+- [Question 221105](https://knowledge.udacity.com/questions/221105)
+- [Question 249630](https://knowledge.udacity.com/questions/249630)
+- [Question 276758](https://knowledge.udacity.com/questions/276758)
+- [Question 224220](https://knowledge.udacity.com/questions/224220)
+- and on Github for [npm install and start](https://github.com/kentcdodds/advanced-react-patterns-v2/issues/34)
+- and in using [Pep8online](http://pep8online.com) for checking formatting Python as mentioned by reviewer 
