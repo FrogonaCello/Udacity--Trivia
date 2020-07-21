@@ -53,26 +53,6 @@ def create_app(test_config=None):
             'categories': categories_list
             })
 
-#    @app.route('/categories/new', methods=['GET', 'POST'])
-#    def create_category():
-#
-#        body = request.get_json()
-#
-#        new_type = body.get('type', None)
-#
-#        try:
-#            category = Category(type=new_type)
-#
-#            category.insert()
-#
-#            return jsonify({
-#                'success': True,
-#                'categories': categories_list
-#                })
-#
-#        except:
-#            abort(422)
-
     @app.route('/categories/<int:category_id>')
     def get_specific_category(category_id):
         category = Category.query.filter(
@@ -190,7 +170,7 @@ def create_app(test_config=None):
     @app.route('/categories/<int:category_id>/questions', methods=['GET'])
     def questions_by_category(category_id):
         try:
-            category_id = int(category_id + 1)
+            category_id = int(category_id)
             selection = Question.query.filter(
                 Question.category == category_id).all()
             current_questions = paginate_questions(request, selection)
